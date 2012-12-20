@@ -1,0 +1,11 @@
+These buttons will help you empty this TiddlyWiki:
+
+<<deleteAllTagged 'Delete all actions' 'Action' '' '' ''>>
+<<deleteAllTagged 'Delete all Projects' 'Project' '' '' ''>>
+<<deleteAllTagged 'Delete all Ticklers' 'Tickler' '' '' ''>>
+<<deleteAllTagged 'Delete all References' 'Reference' '' '' ''>>
+<<deleteAllTagged 'Delete all Contacts' 'Contact' '' '' ''>>
+<<deleteAllTagged 'Delete all Contexts' 'Context' '' '' ''>>
+<<deleteAllTagged 'Delete all Areas' 'Area' '' '' ''>>
+<<deleteAllTagged 'Delete all Realms' 'Realm' '' '' ''>>
+
