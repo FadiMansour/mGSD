@@ -23,8 +23,9 @@ required = [
   ['Starred',       ''],
 
   ['Next',          'ActionStatus',  "order:1\nbutton:n\nbuttonLong:next\n"],
-  ['Waiting For',   'ActionStatus',  "order:2\nbutton:w\nbuttonLong:waiting for\n"],
-  ['Future',        'ActionStatus',  "order:3\nbutton:f\nbuttonLong:future\n"],
+  ['Pending',       'ActionStatus',  "order:2\nbutton:p\nbuttonLong:pending\n"],
+  ['Waiting For',   'ActionStatus',  "order:3\nbutton:w\nbuttonLong:waiting for\n"],
+  ['Future',        'ActionStatus',  "order:4\nbutton:f\nbuttonLong:future\n"],
 
   ['Active',        'ProjectStatus', "order:1\nbutton:a\nbuttonLong:active\n"],
   ['Someday/Maybe', 'ProjectStatus', "order:2\nbutton:s/m\nbuttonLong:someday/maybe\n"],

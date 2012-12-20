@@ -173,7 +173,7 @@ config.indexedTags = {
     },
 
     hasNextAction: function() {
-      var children = fastTagged(this.title).filterByTagExpr('Action && !Done && (Next || [(Waiting For)])');
+      var children = fastTagged(this.title).filterByTagExpr('Action && !Done && (Next || Pending || [(Waiting For)])');
       return children.length > 0;
     },
 

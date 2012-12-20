@@ -519,7 +519,7 @@ merge(config.macros,{
             tiddler.removeTag("Tickler");
             tiddler.addTag("Action");
             tiddler.removeTag("Done");
-            tiddler.setTagFromGroup("ActionStatus","Next");
+            tiddler.setTagFromGroup("ActionStatus","Pending");
             store.resumeNotifications();
             store.notify(tiddler.title,true);
             return false;
