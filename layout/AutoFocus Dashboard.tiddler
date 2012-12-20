@@ -1,0 +1,82 @@
+{{cols2{
+ 
+  {{col{
+ 
+    <<closeOpenList>>
+
+    <<mgtdList
+	title:'Ticklers Requiring Action'
+	startTag:Tickler
+	tags:'!Actioned'
+	view:Tickler
+	mode:global
+	newButtonTags:'Tickler Enabled Once'
+	where:'tiddler.ticklerIsActive()'
+	sort:'tickleDate'
+	dontShowEmpty:yes
+	ignoreRealm:{{config.mGTD.getOptChk('AlertsIgnoreRealm')?'yes':''}}
+    >>
+ 
+    <<mgtdList title:'Highlighted for Review' startTag:Starred tags:'Action && !Done && !Future' view:ActionProj mode:global
+ 	group:''
+ 	gView:bold
+ 	sort:modified
+    >>
+ 
+    <<mgtdList
+ 	title:'Closed List'
+ 	startTag:Action tags:'Next && !Done'
+ 	view:ActionProj
+ 	mode:global
+ 	where:tiddler.hasActiveProject()
+ 	newButtonTags:'Action Next'
+ 	sort:modified
+    >>
+ 
+    <<mgtdList
+ 	title:'Open List'
+ 	startTag:Action
+ 	tags:'Pending && !Done'
+ 	view:ActionProj
+	group:Context
+ 	mode:global
+ 	where:tiddler.hasActiveProject()
+ 	newButtonTags:'Action Pending'
+        sort:modified
+    >>
+
+  }}}
+ 
+  {{col{
+
+    <<mgtdList startTag:Action title:'Waiting' tags:'[(Waiting For)] && !Done' view:ActionProj mode:global 
+ 	group:Contact
+	sort:modified
+ 	gView:bold
+ 	newButtonTags:'Action [(Waiting For)]'
+ 	where:tiddler.hasActiveProject()
+    >>
+  
+    {{scroll10{
+ 
+      <<mgtdList
+ 	title:'Done'
+ 	startTag:Action
+ 	tags:'Done'
+ 	view:DoneAction
+ 	mode:global
+ 	newButtonTags:'Action Next Done'
+ 	sort:-modified
+      >>
+ 
+    }}}
+ 
+  }}}{{col{
+
+<<mgtdList title:'Active Projects' startTag:Project tags:'Active && !Complete' view:ProjectArea mode:global
+	newButtonTags:'Project Active'
+	>>
+
+}}}
+ 
+}}}
