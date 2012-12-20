@@ -753,6 +753,23 @@ with brs in non-mgtdlist content. .normal might help */
 	margin-right: 1px;
 }
 
+/* Support for RTL content */
+div[tags~="RTL"].tiddler .postityellow {
+	    direction: rtl;
+}
+
+div[tags~="RTL"].tiddler .editor textarea {
+	    direction: rtl;
+}
+
+div[tags~="RTL"].tiddler .viewer {
+	    direction: rtl;
+}
+
+div[tags~="RTL"].tiddler .titleContainer {
+	    direction: ltr;
+}
+
 /* for user styles */
 [[StyleSheet]]
 
