@@ -157,7 +157,11 @@ make_tw {
 
   content = ""
   get_tiddler('TitleButtons').get_sections.each do |s|
-    content += "<div macro=\"showWhenTagged '#{s}'\">[[TitleButtons###{s}]]</div>\n"
+  	if s != 'Tickler'
+			content += "<div macro=\"showWhenTagged '#{s}'\">[[TitleButtons###{s}]]</div>\n";
+		else
+			content += "<div macro=\"showWhenTagged '#{s}'\">[[extendedTicklerButtons]]</div>\n";
+		end
   end
   add_tiddler_from_scratch ({'tiddler' => 'TitleButtonsSelector', 'text' => content });
 

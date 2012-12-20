@@ -1,0 +1,45 @@
+<!--{{{-->
+<div class="ticklercontrols controls controlstint">
+ <div style="float:right;" class="smaller">
+  <span class="label">Realm:</span><span macro="multiSelectTag Realm allowNone:on"></span>
+  <span macro="tag Tickler"></span><span macro="help Tickler"></span>
+ </div>
+<div>
+  <span macro="showWhen tiddler.tags.contains('Once') || !tiddler.hasParent('TicklerRepeatType')">
+  <span macro="toggleTag Actioned . -"></span>
+  </span>
+  <span macro="showWhenTaggedAny Daily Weekly Monthly Yearly"><span macro="addInterval"></span></span>
+  <span class='title' macro='view title'></span>
+  <span macro="linkToParent Area '[A]'"></span>
+  <span macro="linkToParent Project '[P]'"></span>
+  <span macro="singleToggleTag tag:Starred"></span>
+  [[MonkeyGTDTheme##Subtitle]]
+ </div>
+ <div macro="hideWhenTagged Actioned" style="padding-top:0.25em;padding-bottom:0.25em;">
+  <span macro="multiToggleTag TicklerRepeatType longVersion:on"></span>
+ </div>
+  <div>
+  <div class="floatleft"><span class="label">Tickler date:</span><br/><span macro="dateChooser"></span></div>
+  <div class="floatleft"><span class="label">Activation time:</span><br/><span macro="select tickleractivate rows:1 allowBlank 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23"></span> hour(s) before <span macro="select ticklerhh rows:1 allowBlank 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23"></span> : <span macro="select ticklermm rows:1 allowBlank 00 05 10 15 20 25 30 35 40 45 50 55"></span></div>
+  <div macro="hideWhenTagged Once"><div class="floatleft"><span class="label">Custom interval:</span><br/>every <span macro="select customint rows:1 allowBlank allowOther 2 3 4 5 6 7 8 9 10"></span>
+  <span macro="showWhenTagged Daily"> days</span>
+  <span macro="showWhenTagged Weekly"> weeks</span>
+  <span macro="showWhenTagged Monthly"> months</span>
+  <span macro="showWhenTagged Yearly"> years</span></div></div>
+  <div class="floatleft buttonsLikeLinks"><br>
+   <span macro="addDay"></span>
+   <span macro="addWeek"></span>
+   <span macro="addMonth"></span>
+   <span macro="addYear"></span>
+  </div>
+  <div class="clearboth"></div>
+ </div>
+ <div>
+  <div class="floatright" macro="convertToFromTickler"><br/></div>
+  <div class="floatleft"><span class="label">Project:</span><br/><span macro="multiSelectTag Project allowNone:on"></span><span macro="linkToParent Project"></span></div>
+  <div macro="hideWhen tiddler.hasParent('Project')" class="floatleft"><span class="label">Area:</span><br><span macro="multiSelectTag Area allowNone:on"></span><span macro="linkToParent Area"></span></div>
+  <div class="floatleft"><span class="label">Associated contact</span>:<br><span macro="multiSelectTag Contact allowNone:on"></span><span macro="linkToParent Contact"></span></div>
+  <div class="clearboth"></div>
+ </div>
+</div>
+<!--}}}-->
