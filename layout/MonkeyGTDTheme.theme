@@ -280,7 +280,7 @@ html>body .header2 {
 	padding:0;
 }
 
-.mtoolbar { padding:0.1em; padding-top:0.5em;}
+.mtoolbar { background-color:[[ColorPalette::PrimaryMid]]; padding:0.1em; padding-top:0.5em;}
 .mtoolbar .button { margin-left:0.5em; padding:0.2em 0.3em; margin:0.2em 0.3em;  }
 .mtoolbar .button.off {background-color:[[ColorPalette::TertiaryMid]]!important; color:black; font-weight:normal;border-color:[[ColorPalette::PrimaryDark]];}
 .mtoolbar .button.on {background-color:[[ColorPalette::TertiaryLight]]; color:black; border-color:[[ColorPalette::PrimaryDark]];} 
