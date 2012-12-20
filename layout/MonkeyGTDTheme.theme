@@ -293,6 +293,7 @@ html>body .header2 {
 #newButtons { padding-left:3em; }
 #newButtons br { display:none; }
 #newButtons .button { background-color:transparent; color:white; border-color:transparent; }
+#newButtons a { color: white; font-weight: normal; }
 
 .txtMGTDMain .tabContents {
 	font-size:120%;

@@ -1,4 +1,4 @@
-<<newSavedTiddler title:'new Action' label:'+ action' tag:{{'Action Next [['+config.macros.mgtdList.getRealm()+']]'}}>>
+<<newSavedTiddler title:'new Action' label:'+ action' tag:{{'Action Pending [['+config.macros.mgtdList.getRealm()+']]'}}>>
 <<newSavedTiddler title:'new Project' label:'+ project' tag:{{'Project Active [['+config.macros.mgtdList.getRealm()+']]'}}>>
 /%<<newSavedTiddler title:'new Tickler' label:'+ tickler' tag:{{'Tickler Once [['+config.macros.mgtdList.getRealm()+']]'}}>>
 %/<<calendarPopup '+ tickler' 'new Tickler'>>/% <-- experimental %/
@@ -6,3 +6,4 @@
 <slider quick add>
 <<processInbox>>
 </slider>
+[[AutoFocus Dashboard]]
