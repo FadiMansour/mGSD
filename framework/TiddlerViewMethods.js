@@ -57,7 +57,7 @@ merge(Tiddler.prototype,{
         '%1'+
     '<<singleToggleTag tag:Starred title:[[%0]]>>'+
     '<<dateChooser [[%0]]>>'+
-		'<<newTiddler label:"Y" title:[[%0]] tag:Pending tag:Action tag:[[%3]] text:[[%4]]>>'+
+		'<<newTiddler label:"Y" title:[[%0]] tag:Next tag:Action tag:[[%3]] text:[[%4]]>>'+
     '&nbsp;[[%0]]'+
     '<<deleteTiddler [[%0]]>>'+
     '}}}'+
