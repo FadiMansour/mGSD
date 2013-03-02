@@ -90,7 +90,8 @@ Tiddler.prototype.render_Tickler=function() {
 		'<<singleToggleTag tag:Starred title:[[%0]]>>'+
 		'<<dateChooser [[%0]]>>'+
 		(this.fields.ticklerhh ? (' //('+this.fields.ticklerhh+':'+(this.fields.ticklermm ? this.fields.ticklermm : '00')+')//') : '')+
-		'<<newTiddler label:"Y" title:[[%0]] tag:Pending tag:Action tag:[[%3]] text:[[%4]]>>'+
+		'<<newTiddler label:"N" title:[[%0]] tag:Next tag:Action tag:[[%3]] text:[[%4]]>>'+
+		'<<newTiddler label:"P" title:[[%0]] tag:Pending tag:Action tag:[[%3]] text:[[%4]]>>'+
 		'&nbsp;[[%0]]'+
 		'<<deleteTiddler [[%0]]>>'+
 		'}}}'+
@@ -101,7 +102,7 @@ Tiddler.prototype.render_Tickler=function() {
             		doneControl.format([this.title]),
 			pLink,
 			config.macros.mgtdList.getRealm(),
-			this.text.htmlEncode(),
+			this.text.htmlEncode()
 		]
 	);};
 
