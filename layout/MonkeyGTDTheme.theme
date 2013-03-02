@@ -87,6 +87,7 @@
 </div>
 <div id='displayArea'>
 	<div id='messageArea'></div>
+	<div id='tiddlersBar' refresh='none' ondblclick='config.macros.tiddlersBar.onTiddlersBarAction(event)'></div>
 	<div id='tiddlerDisplay'></div>
 </div>
 <!--}}}-->
