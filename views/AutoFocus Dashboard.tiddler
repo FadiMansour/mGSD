@@ -50,33 +50,31 @@
   {{col{
 
     <<mgtdList startTag:Action title:'Waiting' tags:'[(Waiting For)] && !Done' view:ActionProj mode:global 
- 	group:Contact
-	sort:modified
- 	gView:bold
- 	newButtonTags:'Action [(Waiting For)]'
- 	where:tiddler.hasActiveProject()
+			group:Contact
+			sort:modified
+			gView:bold
+			newButtonTags:'Action [(Waiting For)]'
+			where:tiddler.hasActiveProject()
     >>
   
+		<<mgtdList title:'Active Projects' startTag:Project tags:'Active && !Complete' view:ProjectArea mode:global
+			newButtonTags:'Project Active'
+		>>
+
     {{scroll10{
  
       <<mgtdList
- 	title:'Done'
- 	startTag:Action
- 	tags:'Done'
- 	view:DoneAction
- 	mode:global
- 	newButtonTags:'Action Next Done'
- 	sort:-modified
+				title:'Done'
+				startTag:Action
+				tags:'Done'
+				view:DoneAction
+				mode:global
+				newButtonTags:'Action Next Done'
+				sort:-modified
       >>
  
     }}}
  
-  }}}{{col{
+  }}}
 
-<<mgtdList title:'Active Projects' startTag:Project tags:'Active && !Complete' view:ProjectArea mode:global
-	newButtonTags:'Project Active'
-	>>
-
-}}}
- 
 }}}
